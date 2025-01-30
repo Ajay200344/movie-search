@@ -1,0 +1,23 @@
+.contain{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px
+}
+.box{
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  
+
+}
+.b1{
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  cursor:pointer
+}
+.b1:hover{
+    background-color: black;
+    color: white;
+}
