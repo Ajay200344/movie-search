@@ -9,7 +9,7 @@ function Search(props){
      
       
       useEffect(() => {
-         fetch(`http://www.omdbapi.com/?t=${props.get}}&apikey=${API_KEY}`)
+         fetch(`https://www.omdbapi.com/?t=${props.get}}&apikey=${API_KEY}`)
             .then((response)=>{
                   if(!response.ok){
                         setLoading(false);
