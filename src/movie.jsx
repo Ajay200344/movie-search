@@ -5,11 +5,11 @@ import './movie.css'
 function Search(props){
       const [data, setdata]= useState("");
       const [loading, setLoading]= useState(true);
-
+      const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
      
       
       useEffect(() => {
-         fetch(`http://www.omdbapi.com/?t=${props.get}}&apikey=5327c9cd`)
+         fetch(`http://www.omdbapi.com/?t=${props.get}}&apikey=${API_KEY}`)
             .then((response)=>{
                   if(!response.ok){
                         setLoading(false);
