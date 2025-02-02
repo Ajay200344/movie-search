@@ -9,10 +9,12 @@ function Search(props){
      
       
       useEffect(() => {
-         fetch(`https://www.omdbapi.com/?t=${props.get}}&apikey=${API_KEY}`)
+            setLoading(true);
+            setdata("");
+         fetch(`https://www.omdbapi.com/?t=${props.get}&apikey=${API_KEY}`)
             .then((response)=>{
                   if(!response.ok){
-                        setLoading(false);
+                        
                         return <h2>failed to fetch data</h2>
                   }
                   return response.json();
@@ -22,7 +24,7 @@ function Search(props){
                         setLoading(false);
             })
       }, [props.get]);
-       
+       console.log(data);
       if(loading){ 
             return<h2>Loading...</h2>;       
       }
@@ -32,6 +34,7 @@ function Search(props){
           }else{
         
           return (
+            
             <div className="main">
               <img src={data.Poster} alt={data.Title} />
               <div className="inner">

@@ -7,6 +7,7 @@ function Input({onSearch}){
         
         const a=document.getElementById("input").value;
         onSearch(a);
+    
     }
     return(
         <div className="contain">
